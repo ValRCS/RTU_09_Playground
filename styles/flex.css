@@ -1,0 +1,68 @@
+.container {
+    min-height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: row-reverse;  */
+    /* justify-content: center; */
+    /* justify-content: flex-start; the default */
+    /* justify-content: space-between; */
+    justify-content: space-around;
+    /* align-items: center; */
+    /* align-items: flex-start; */
+    /* align-items: stretch; */
+    /* align-items: flex-end; */
+
+    /* align content is for multiple line alignment */
+    /* align-content: center; */
+    align-content: space-between;
+    align-content: space-around;
+    border: 5px solid black;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: tan;
+    margin: 3px;
+    border: 2px dotted green;
+}
+
+/* YOu can keep making flex containers */
+.box09 {
+    background-color: thistle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-2 {
+    display: flex;
+    /* width: 300px; */
+    height: 200px;
+    border: 5px solid black;
+}
+
+.box-dos {
+    background-color: yellowgreen;
+    border: 2px dotted brown;
+}
+
+.box-1 {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.box-2 {
+    flex-grow: 2;
+    flex-shrink: 2;
+}
+
+.box-3 {
+    flex-grow: 3;
+    flex-shrink: 5; /* so when the parent is very small box-3 will be shrink 5 times as much as box-1 and box-4 */
+}
+
+.box-4 {
+    flex-grow: 4;
+    flex-shrink: 4;
+}
