@@ -1,6 +1,17 @@
 * {
     color: darkolivegreen;
     box-sizing: border-box; 
+
+}
+
+@media screen and (max-width: 576px) {
+    * {
+        background-color: rosybrown;
+    }
+
+    .animal {
+        background-color: seagreen; 
+    }
 }
 
 p {
@@ -66,3 +77,4 @@ strong {
     margin: 15px;
     display: inline-block;
 }
+
