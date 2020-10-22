@@ -1,0 +1,68 @@
+* {
+    color: darkolivegreen;
+    box-sizing: border-box; 
+}
+
+p {
+    color: green;
+    /* font-style: italic; */
+    /* so commenting out the italic just for humans*/
+    font-family: monospace; 
+}
+
+.serif {
+    font-family: serif;
+}
+
+.sans-serif {
+    font-family: sans-serif;
+}
+
+.weird-font {
+    /* font-family: 'Chilanka'; */
+    font-family: 'Chilanka', cursive;
+}
+h4 {
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+h3 {
+    color: purple;
+    background-color: lightgray;
+    width: 300px;
+    height: 200px;
+    border: 3px dotted black;
+    padding: 25px;
+    margin: 10px;
+}
+li {
+    color: darkkhaki;
+}
+
+ol li {
+    color: darkslateblue;
+}
+
+ul {
+    background-color: gray;
+}
+.animal {
+    color: rebeccapurple;
+    background-color: salmon;
+}
+#bad-li {
+    color: antiquewhite;
+}
+
+/* .my-strong { */
+strong {
+    background-color: lightpink;
+    width: 200px;
+    height: 50px;
+    padding: 10px;
+    border: 2px solid green;
+    margin: 15px;
+    display: inline-block;
+}
