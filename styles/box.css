@@ -9,6 +9,12 @@
     margin: 10px;
 }
 
+.box:hover {
+    border: 3px solid black;
+    width: 150px;
+    
+}
+
 .box2 {
     position: relative;
     background-color: limegreen;

@@ -1,0 +1,68 @@
+.container {
+    /* display: flex;
+    flex-wrap: wrap; */
+    display: grid;
+    /* grid-template-columns: 180px 180px 180px; */
+    /* grid-template-columns: 1fr 2fr 1fr; */
+    grid-template-columns: 100px 1fr 2fr 150px;
+    grid-template-rows: 150px 150px 150px 150px 150px;
+    gap: 15px;
+    /* the names head ad nav etc are made up ourselves to have some meaning"*/
+    grid-template-areas: 
+        "head head head head"
+        "ad nav nav nav"
+        "ad main main main"
+        "ad main main main"
+        "foot foot foot foot"
+    ;
+}
+
+.box {
+    /* width: 100px;
+    height: 100px; */
+    background-color: teal;
+    border: 5px dotted black;
+
+}
+
+.box01 {
+    /* grid-area: 1 / 1 / 3 / 4 ; */
+    grid-area: head;
+    background-color: tomato;
+}
+
+.box02 {
+    /* grid-area: 3 / 4 / 5 / 6 ; */
+    grid-area: nav;
+    background-color: orangered;
+}
+
+.box03 {
+    grid-area: ad;
+    background-color: plum;
+}
+
+.box04 {
+    grid-area: main;
+    background-color: greenyellow;
+}
+
+
+@media (min-width: 972px) {
+    .container {
+        /* still grid */
+        grid-template-columns: 160px 160px 160px 160px;
+        grid-template-rows: 150px 150px 150px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        /* still grid */
+        grid-template-columns: 160px 160px 160px 160px 160px 160px;
+        grid-template-rows: 150px 150px;
+
+    }
+}
+
+
