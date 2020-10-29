@@ -10,7 +10,7 @@
     /* the names head ad nav etc are made up ourselves to have some meaning"*/
     grid-template-areas: 
         "head head head head"
-        "ad nav nav nav"
+        "nav nav nav nav"
         "ad main main main"
         "ad main main main"
         "foot foot foot foot"
@@ -45,23 +45,54 @@
 .box04 {
     grid-area: main;
     background-color: greenyellow;
+
+}
+
+.m-cont {
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: relative;
+    top: 50px; */
+}
+
+main {
+
+    height: 150px;
+
+}
+.box05 {
+    grid-area: foot;
+    background-color: goldenrod;
 }
 
 
 @media (min-width: 972px) {
     .container {
         /* still grid */
-        grid-template-columns: 160px 160px 160px 160px;
-        grid-template-rows: 150px 150px 150px;
+        height: 600px;
+        grid-template-columns: 1fr 2fr 2fr 1fr;
+        grid-template-rows: 1fr 2fr 1fr;
+        grid-template-areas: 
+        "head head nav nav"
+        "ad main main main"
+        "foot foot foot foot"
+    ;
     }
 }
 
 @media (min-width: 1200px) {
     .container {
         /* still grid */
-        grid-template-columns: 160px 160px 160px 160px 160px 160px;
-        grid-template-rows: 150px 150px;
-
+        grid-template-columns: 1fr 1fr 2fr 2fr 1fr 1fr ;
+        grid-template-rows: 1fr 2fr 1fr;
+        grid-template-areas: 
+        ". head head nav nav . "
+        ". ad main main main . "
+        ". foot foot foot foot ."
+    ;
     }
 }
 
