@@ -2,7 +2,15 @@ p   {
     background-color: sienna;
 }
 
+.not-important {
+    display:none;
+}
+
 @media (min-width: 576px) {
+    .not-important {
+        display: block;
+    }
+    
     p {
         background-color: red;
     }

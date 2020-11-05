@@ -10,9 +10,19 @@
 }
 
 .box:hover {
-    border: 3px solid black;
-    width: 150px;
+    /* border: 3px solid black;
+    width: 150px; */
+    /* box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75); */
+    box-shadow: 4px 4px 5px 0px rgba(88, 29, 29, 0.75);
     
+}
+
+footer {
+    margin: 0 auto;
+    width: 50%;
+    box-shadow: 14px 14px 5px 0px rgba(88, 29, 29, 0.75);
+    display: flex;
+    justify-content: center;
 }
 
 .box2 {
@@ -39,4 +49,68 @@
     background-color: red;
     top: 15px;
     left: 75px;
+}
+
+.box6 {
+    background: linear-gradient(45deg, yellow 0px, blue 40px, green 40px, red 80px);
+
+}
+
+.box6:hover {
+    animation-name: box-anim; /* so you have to define this animation somewhere box-anim I made up */
+    animation-duration: 8s;
+    animation-fill-mode: forwards; /* so this rule makes the animation complete and stay put */
+    animation-iteration-count: 3;
+}
+
+@keyframes box-anim {
+    0% {
+        transform: scale(1) translate(0px, 0px);
+    }
+
+    50% {
+        background: linear-gradient(45deg,green 0px, blue 40px, pink 40px, red 80px);
+        transform: scale(2) translate(50px, 0px);
+    }
+
+    100% {
+        transform: scale(1) translate(0px, 0px);
+    }
+}
+
+.box7 {
+    background: linear-gradient(#e66465, #9198e5);
+}
+
+.box8 {
+    transform: translate(30px, 20px) ; 
+    /*quite similar to position relative and then top: 30px and left: 20PX BUT THIS IS FASTER this is CSS3 and relative positioning was CSS2*/
+}
+
+.box9 {
+    transform: rotateY(180deg);
+}
+
+.box10 {
+    transform: rotate(45deg);
+}
+
+.box11:hover {
+    background: red;
+    animation-name: color-shift;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}    
+
+@keyframes color-shift {
+    25% {
+        background-color: blue;
+    }
+    75% {
+        background-color: yellow;
+    }
+    100% {
+        background-color: green;
+    }
 }
