@@ -27,3 +27,46 @@ isSnowing = false; //turns out it is not snowing...
 
 console.log("Is it raining AND also warm AND also snowing? ", isRaining && isWarm && isSnowing); //so we check if ALL sideds are true only then it will be true
 console.log("Is it raining OR possibly warm OR possibly snowing? ", isRaining || isWarm || isSnowing); //so we check if ANY sides are true then it will be true
+
+console.log("Let's check if it is raining");
+isRaining = true;
+//if (isRaining) is true we perform whatever instructions are in the following brackets { ...... }
+if (isRaining) {
+    console.log("I need my umbrella");
+}
+
+console.log("How about snow?");
+//here I call my weather report station and get answer
+isSnowing = true;
+
+if (isSnowing) {
+    console.log("Let me get my skiis");
+    console.log("Snow tires too..");
+} else {
+    console.log("Whew it is not snowing at least");
+    console.log("Maybe I will go for a swim...");
+}
+
+const myNumber = 142;
+
+
+if (myNumber > 42) {
+    console.log("Oh your number " + myNumber + " is over 42");
+} else if (myNumber < 42) {
+    console.log("Oh your number is LESS than 42");
+} else  {//well whatever else is left goes here 
+    console.log("Aha so I can conclude that myNumber is 42");
+}
+
+
+//better to use constant or variable for 42, 42 is so called magic number which is considered bad practice
+const numberToFind = 42;
+
+if (myNumber > numberToFind) {
+    console.log("Oh your number " + myNumber + " is over " + numberToFind);
+} else if (myNumber < numberToFind) {
+    console.log("Oh your number is LESS than " + numberToFind);
+} else  {//well whatever else is left goes here 
+    console.log("Aha so I can conclude that myNumber is " + numberToFind);
+}
+console.log("All done for today! Whew...");
