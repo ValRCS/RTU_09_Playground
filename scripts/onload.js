@@ -11,6 +11,12 @@ const numResult = document.getElementById("num-result");
 //so this will be HTMLCollection (kind of like a specific array data type) hold all elements with class my-numbers
 const allNumInputs = document.getElementsByClassName("my-numbers");
 
+const addElBtn = document.getElementById("add-el");
+
+const elCont = document.getElementById("app-cont");
+
+let globalCount = 0; //use global state sparingly
+
 
 function onCapClick() {
     console.log("Capitalize button pressed!");
@@ -41,6 +47,23 @@ function onNumChange(event) {
     numResult.innerText = "All number sum is:" + allNumSum;
 }
 
+//TODO add ability to add class to the element
+function addNewElement(tag, parent, text, id, defClass = "new-el") {
+    const newEl = document.createElement(tag); 
+    newEl.id = id;
+    newEl.classList.add(defClass);
+    newEl.innerText = text;
+    parent.appendChild(newEl);
+}
+
+function onAddBtnPress(event) {
+    console.log("Pressed button with ID", event.target.id);
+    globalCount++;
+    const text = "Adding element No. " + globalCount;
+    const id = "newel"+globalCount;
+    addNewElement("div", elCont, text,  id);
+}
+
 function addListeners() {
     console.log("Adding listeners");
     capitalizeBtn.addEventListener("click", onCapClick);
@@ -53,6 +76,7 @@ function addListeners() {
         element.addEventListener("input", onNumChange)
     }
 
+    addElBtn.addEventListener("click", onAddBtnPress);
     
 }
 
