@@ -6,6 +6,11 @@ const nameField = document.getElementById("name-input");
 
 const resultLive = document.getElementById("result-live");
 const resultField = document.getElementById("result-field");
+const numResult = document.getElementById("num-result");
+
+//so this will be HTMLCollection (kind of like a specific array data type) hold all elements with class my-numbers
+const allNumInputs = document.getElementsByClassName("my-numbers");
+
 
 function onCapClick() {
     console.log("Capitalize button pressed!");
@@ -18,6 +23,23 @@ function onNameChange() {
     resultLive.innerText = "lower input: " + nameField.value.toLowerCase();
 }
 
+function getSumFromHTMLCol(htmlCol) {
+    let total = 0;
+    for (let element of htmlCol) {
+        // console.log("My element value is ", element.value);
+        total += parseInt(element.value); //we need parseInt else we will get string addition
+    }
+    return total; //dont forget to return values sometimes :)
+}
+
+//TODO add me
+function onNumChange(event) {
+    console.log("Some number was changed!");
+    console.log("Actually my name is", event.target.name);
+    console.log("My new value is", event.target.value);
+    const allNumSum = getSumFromHTMLCol(allNumInputs);
+    numResult.innerText = "All number sum is:" + allNumSum;
+}
 
 function addListeners() {
     console.log("Adding listeners");
@@ -25,6 +47,11 @@ function addListeners() {
     // nameField.addEventListener("change", onNameChange); //so change only fires when Enter is pressed in text input
     //so input will change on any time the input field has changed
     nameField.addEventListener("input", onNameChange);
+
+    //looping through all of my elements in allNumInputs and adding a listener to each one
+    for (let element of allNumInputs) {
+        element.addEventListener("input", onNumChange)
+    }
 
     
 }
