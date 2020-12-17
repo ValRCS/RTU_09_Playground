@@ -78,3 +78,10 @@ strong {
     display: inline-block;
 }
 
+.even-class {
+    background-color: aqua;
+}
+
+.odd-class {
+    background-color: plum;
+}
