@@ -29,3 +29,24 @@ let user = {     // an object
 
   //check existance of key
   console.log("Is there speed in user object?", "speed" in user);
+
+//we can next pretty complex objects with array inside
+//or arrays with objects and so on , many levels deep
+
+//here we create an array of objects
+let users = [
+    user, //here i use already built object
+    {
+        name: "Liga",
+        speed: 300
+    },
+    {
+        name: "Maija",
+        dislikes: "school",
+        likes: "Legos"
+    }
+
+];
+
+console.log(users[0]["likes"]);
+console.log(users[2]["likes"]);
